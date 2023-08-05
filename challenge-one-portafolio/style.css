@@ -1,0 +1,654 @@
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+section.menu {
+  background-color: #d7ccc8;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+.menu__header {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  padding-left: 1rem;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.menu__list__item:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+.menu__list__item__contato {
+  color: #323737;
+}
+.menu__list__item__contato:hover {
+  text-decoration: underline;
+  font-weight: 500;
+  color: #323737;
+}
+/*Sección Title*/
+
+section.title {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: -4rem;
+  flex-direction: row-reverse;
+}
+
+.title__div {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 250px;
+  width: 71rem;
+  align-items: center;
+}
+.title__container {
+  display: flex;
+  width: 46.9375rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.title__bio {
+  color: #323737;
+  font-size: 46px;
+  font-weight: 750;
+  margin: 15rem 0 10px 1rem;
+}
+.title__subsection {
+  color: #4d4d4f;
+  font-weight: lighter;
+  margin: 0 0 20px 1rem;
+}
+
+.title__network {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.title__network__item {
+  margin-right: 10px;
+}
+.title__network__item:hover {
+  text-decoration: underline;
+}
+.title__profile {
+  margin-right: 1rem;
+  flex-grow: 5;
+}
+/*Sección About*/
+
+section.about {
+  background-color: #e3dddb;
+  display: flex;
+  padding: 5.125rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.about__title {
+  color: #4d4d4f;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.about__paragraph {
+  color: #4d4d4f;
+}
+
+.about__container {
+  display: flex;
+  width: 71rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/*Sección Skills*/
+section.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.skills__title {
+  color: #323737;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 750;
+  padding-bottom: 1rem;
+}
+.skills__line {
+  display: flex;
+  justify-content: space-around;
+  gap: 8rem;
+}
+.skills__box {
+  background-color: #f2f4f4;
+  display: flex;
+  width: 10rem;
+  height: 10.875rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.skills__name {
+  margin-top: 1rem;
+}
+/*Sección Hobbies*/
+
+section.hobbies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+
+.hobbies__title {
+  color: #323737;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 750;
+  padding-bottom: 2rem;
+}
+
+.hobbies__line {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+}
+.hobbies__box {
+  background-color: #f2f4f4;
+  display: flex;
+  width: 10rem;
+  height: 10.875rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.hobbies__name {
+  margin-top: 1rem;
+}
+#imagen-idiomas {
+  margin-top: 5px;
+}
+
+/* Experiencia Académica*/
+
+section.academic {
+  background-color: #e3dddb;
+  display: flex;
+  padding: 5.125rem;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.academic__title {
+  color: #323737;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.academic__courses {
+  display: flex;
+  justify-content: space-around;
+}
+.academic__courses__item__title {
+  color: #323737;
+}
+
+.academic__courses__item__subtitle {
+  color: #4d4d4f;
+}
+
+.academic__courses__list {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.academic__courses__item__img {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 23rem;
+  height: 17.875rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+/* experiencia*/
+
+section.experience {
+  background-color: var(--cor-de-fundo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+.experience__section__title {
+  color: #323737;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.experience__img {
+  width: 55%;
+  padding-left: 5rem;
+}
+.experience__box {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 250px;
+  padding: 10px;
+}
+.experience__info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+  padding-top: 4rem;
+}
+.experience__title {
+  color: #323737;
+  font-weight: bolder;
+}
+.experience__text {
+  color: #4d4d4f;
+  font-weight: lighter;
+  font-size: medium;
+}
+.experiencia__botao--repo {
+  border: 1px solid #2a7ae4;
+  color: #2a7ae4;
+  display: flex;
+  border-radius: 7px;
+  margin-top: 1rem;
+  max-width: 20rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/*Contacto*/
+
+section.formcontato {
+  background-color: #e3dddb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5.125rem;
+}
+.formcontato__contacto {
+  display: flex;
+  align-items: center;
+}
+.formcontato__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  padding-right: 2rem;
+}
+.formcontato__title {
+  color: #323737;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.formcontato__subtext {
+  color: #4d4d4f;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+.formcontato__form p {
+  display: none;
+}
+.formcontato__input {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+.formcontato__textarea {
+  width: 100%;
+  height: 8.3rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  font-family: Raleway;
+  resize: none;
+}
+.formcontato__botao {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: #2a7ae4;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+/*footeer*/
+
+section.footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+.footer__rodape {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #b06ab3;
+  padding-top: 20px;
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+  /* Menú */
+  section.menu {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu__header {
+    justify-content: flex-start;
+  }
+
+  .menu__list__item {
+    display: none;
+  }
+
+  .menu__list__item__contato {
+    display: block;
+    font-weight: 700;
+  }
+  /*title*/
+  section.title {
+    margin-bottom: 1rem;
+  }
+
+  .title__div {
+    width: 100%;
+    align-items: center;
+  }
+
+  .title__container {
+    display: flex;
+    width: 32.76rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title__bio {
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-top: 3rem;
+  }
+  .title__subsection {
+    margin-bottom: 10px;
+  }
+
+  .title__network {
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .title__network__item {
+    margin-right: 5px;
+  }
+  .title__profile {
+    width: 13rem;
+    height: 13rem;
+  }
+  /*about*/
+  section.about {
+    padding: 1rem;
+    margin: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  .about__container {
+    width: 100%;
+  }
+  /*skills*/
+  section.skills {
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  .skills__line {
+    flex-wrap: wrap;
+  }
+  .skills__box {
+    height: 7.375rem;
+  }
+
+  /*Hobbies*/
+  section.hobbies {
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  .hobbies__line {
+    flex-wrap: wrap;
+  }
+  .hobbies__box {
+    height: 7.375rem;
+  }
+
+  /*Formación Académica*/
+  section.academic {
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  .academic__courses__item__img {
+    width: 20rem;
+    height: 11rem;
+  }
+  .academic__courses__list {
+    padding-left: 1rem;
+  }
+  /*Experiencia Profesional*/
+  section.experience {
+    margin-bottom: 17rem;
+  }
+  .experience__box {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience__img {
+    padding-left: 0;
+
+    width: 40rem;
+    align-self: center;
+  }
+
+  .experience__info-container {
+    padding-top: 2rem;
+  }
+  /*contacto*/
+  section.formcontato {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    align-self: stretch;
+  }
+
+  .formcontato__text {
+    margin-left: 0;
+  }
+
+  .formcontato__title {
+    margin-bottom: 2rem;
+  }
+
+  .formcontato__form {
+    align-items: flex-start;
+  }
+  .formcontato--esquerda {
+    display: none;
+  }
+
+  /*Mobile*/
+  @media screen and (max-width: 425px) {
+    /*Menu*/
+
+    /*Titulo*/
+
+    section.title {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    .title__div {
+      display: flex;
+      flex-direction: column;
+    }
+    .title__profile {
+      width: 15rem;
+      height: 15rem;
+    }
+    .title__bio {
+      margin-top: 2px;
+      font-size: x-large;
+    }
+    .title__container {
+      width: 400px;
+    }
+
+    .title__subsection {
+      font-size: medium;
+    }
+    .title__network {
+      padding-left: 0;
+      gap: 0.7rem;
+      margin-left: 16px;
+      /*width: 100px;*/
+    }
+    .title__network li {
+      display: flex;
+      align-items: center;
+    }
+    .title__network li img {
+      margin-left: 1px;
+    }
+
+    /*Sección sobre mi*/
+
+    /*Skills*/
+    .skills {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    .skills__box {
+      height: 5rem;
+      width: 7rem;
+    }
+    .ul-skills {
+      align-items: flex-end;
+      padding-left: 0;
+    }
+    /*Hobbies*/
+    .hobbies__box {
+      height: 5rem;
+      width: 7rem;
+    }
+    .ul-hobbies {
+      align-items: flex-end;
+      padding-left: 0;
+    }
+
+    /*Formación Académica*/
+
+    /*Experiencia Profesional*/
+    .experiencie__box {
+      width: 18rem;
+    }
+    .experience__img {
+      width: 18rem;
+    }
+
+    /*Contacto*/
+
+    /*Footer*/
+  }
+}
